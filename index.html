@@ -299,6 +299,7 @@
     <div id="usersList" class="container-fluid text-center bg-grey">
       <h2>Users</h2>
       <h4>List of completed users</h4>
+      <div id="usersList"></div>
     </div>
 
     <footer id="footer" class="container-fluid text-center">
@@ -345,6 +346,13 @@
         //Date to Fetch
         for (j = 0; j < dataArray.length; j++) {
           // console.log(dataArray[j].title);
+
+          const card = document.querySelectorAll(".card");
+          //Fetch Promotional Car ID
+          for (h = 0; h < card.length; h++) {
+            card[h].setAttribute("id", dataArray[h].id);
+            // console.log(card[h].id);
+          }
 
           //Fetch Promotional Image
           const cardImage = document.querySelectorAll(".card-img-top");
