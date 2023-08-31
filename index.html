@@ -342,15 +342,16 @@
           });
         });
 
-        //Fetch Promotional Image
-        const cardImage = document.querySelectorAll(".card-img-top");
-        for (i = 0; i < cardImage.length; i++) {
-          console.log(cardImage[i].src);
-        }
-
         //Date to Fetch
         for (j = 0; j < dataArray.length; j++) {
-          console.log(dataArray[j].title);
+          // console.log(dataArray[j].title);
+
+          //Fetch Promotional Image
+          const cardImage = document.querySelectorAll(".card-img-top");
+          for (i = 0; i < cardImage.length; i++) {
+            cardImage[i].src = dataArray[j].thumbnailUrl;
+            console.log(cardImage[i].src);
+          }
         }
       });
     </script>
