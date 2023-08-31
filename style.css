@@ -1,0 +1,227 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.8;
+  color: #818181;
+}
+
+/*Calixto Francis Mantal - Custom Code - Start*/
+
+/*HERO SECTION*/
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Ramabhadra", sans-serif !important;
+}
+#hero-title-with-cta {
+  width: 50%;
+  line-height: 4.2rem;
+}
+#sub-title {
+  font-size: 3.7rem;
+}
+#main-title {
+  font-size: 5.5rem;
+  font-weight: bolder;
+  color: #fedc0b;
+}
+#min-title {
+  font-size: 3.4rem;
+}
+#cta-button {
+  display: inline-block;
+  background: rgb(254, 243, 110);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 243, 110, 1) 49%,
+    rgba(251, 236, 33, 1) 56%
+  );
+  width: 47%;
+  border-radius: 20px;
+  text-align: center;
+  color: #000;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: -1px 2px 20px 0px rgba(254, 220, 11, 1);
+  -webkit-box-shadow: -1px 2px 20px 0px rgba(254, 220, 11, 1);
+  -moz-box-shadow: -1px 2px 20px 0px rgba(254, 220, 11, 1);
+}
+
+/*PROMOTION SECTION*/
+.pormotion-cards {
+  margin-top: 50px;
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.col-sm-3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: solid 1px grey;
+  width: 250px !important;
+}
+.card-img-top {
+  width: 100%;
+  height: 150px;
+}
+.card-body {
+  text-align: left;
+  padding: 15px;
+}
+.card-title {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+}
+.btn-more-info {
+  background-color: #007bff;
+  border: none;
+}
+/*Calixto Francis Mantal - Custom Code - End*/
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.jumbotron {
+  background-color: #000;
+  background-image: url(/images/image2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 10px 25px;
+  height: 525px;
+  margin-bottom: 0;
+}
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: #f6f6f6;
+}
+.logo-small {
+  color: #f4511e;
+  font-size: 50px;
+}
+.logo {
+  color: #f4511e;
+  font-size: 200px;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #161616;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
+}
+.navbar li a,
+.navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f4511e;
+}
+.slideanim {
+  visibility: hidden;
+}
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+/*Calixto Francis Mantal - Custom Code - Start*/
+@media (max-width: 640px) {
+  .jumbotron {
+    background-image: url(/images/image1.jpg);
+    background-position: center;
+    width: 100%;
+    font-family: "Ramabhadra", sans-serif !important;
+  }
+  #hero-title-with-cta {
+    width: 100%;
+    border: solid 1px green;
+  }
+  #sub-title {
+    font-size: 1.9rem;
+  }
+  #main-title {
+    font-size: 5.7rem;
+    font-weight: bolder;
+    color: #fedc0b;
+    line-height: 5rem;
+  }
+  #min-title {
+    font-size: 3.5rem;
+  }
+  #cta-button {
+    width: 100%;
+  }
+}
+
+/*Calixto Francis Mantal - Custom Code - End*/
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 150px;
+  }
+}
