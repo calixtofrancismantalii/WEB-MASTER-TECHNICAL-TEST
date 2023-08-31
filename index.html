@@ -352,6 +352,13 @@
             cardImage[i].src = dataArray[j].thumbnailUrl;
             console.log(cardImage[i].src);
           }
+
+          //Fetch Promotional Title
+          const cardTitle = document.querySelectorAll(".card-title");
+          for (let k = 0; k < cardTitle.length; k++) {
+            cardTitle[k].innerHTML = dataArray[k].title;
+            console.log(dataArray[j].title);
+          }
         }
       });
     </script>
