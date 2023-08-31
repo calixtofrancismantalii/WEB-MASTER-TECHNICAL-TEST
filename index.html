@@ -350,14 +350,18 @@
           const cardImage = document.querySelectorAll(".card-img-top");
           for (i = 0; i < cardImage.length; i++) {
             cardImage[i].src = dataArray[j].thumbnailUrl;
-            console.log(cardImage[i].src);
           }
 
           //Fetch Promotional Title
           const cardTitle = document.querySelectorAll(".card-title");
           for (let k = 0; k < cardTitle.length; k++) {
             cardTitle[k].innerHTML = dataArray[k].title;
-            console.log(dataArray[j].title);
+          }
+
+          //Fetch Promotional Body
+          const cardBody = document.querySelectorAll(".card-text");
+          for (let l = 0; l < cardBody.length; l++) {
+            cardBody[l].innerHTML = dataArray[l].body;
           }
         }
       });
