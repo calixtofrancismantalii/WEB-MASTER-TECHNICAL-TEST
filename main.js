@@ -17,26 +17,3 @@ function getRandomUser() {
       console.error("Error:", error);
     });
 }
-
-// Check if element with ID "usersList" exists
-const usersList = document.getElementById("usersList");
-if (usersList) {
-  // Fetch JSON data from the URL
-  fetch("https://jsonplaceholder.typicode.com/users")
-    .then((response) => response.json())
-    .then((data) => {
-      // Filter users whose zipcode starts with "5"
-      const filteredUsers = data.filter((user) =>
-        user.address.zipcode.startsWith("5")
-      );
-
-      // Create a list of users
-      const userListHTML = filteredUsers
-        .map((user) => <li>${user.name}</li>)
-        .join("");
-
-      // Print the list to the "usersList" section
-      usersList.innerHTML = <ul>${userListHTML}</ul>;
-    })
-    .catch((error) => console.log(error));
-}

@@ -296,7 +296,7 @@
       </div>
     </section>
 
-    <div id="usersList" class="container-fluid text-center bg-grey">
+    <div class="container-fluid text-center bg-grey">
       <h2>Users</h2>
       <h4>List of completed users</h4>
       <div id="usersList"></div>
@@ -371,6 +371,33 @@
           for (let l = 0; l < cardBody.length; l++) {
             cardBody[l].innerHTML = dataArray[l].body;
           }
+        }
+
+        // Check if element with ID "usersList" exists
+        var usersListElement = document.getElementById("usersList");
+        if (usersListElement) {
+          // Fetch JSON data
+          fetch("https://jsonplaceholder.typicode.com/users")
+            .then((response) => response.json())
+            .then((users) => {
+              // Filter users with zip code starting with "5"
+              var filteredUsers = users.filter((user) =>
+                user.address.zipcode.startsWith("5")
+              );
+
+              // Generate HTML list
+              var userListHTML = "<ul>";
+              filteredUsers.forEach((user) => {
+                userListHTML += "<li>" + user.name + "</li>";
+              });
+              userListHTML += "</ul>";
+
+              // Print to "usersList" section
+              usersListElement.innerHTML = userListHTML;
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            });
         }
       });
     </script>
